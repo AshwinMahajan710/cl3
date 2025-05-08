@@ -1,0 +1,7 @@
+import xmlrpc.client
+
+n = int(input("Enter the no :- "))
+
+proxy = xmlrpc.client.ServerProxy('http://localhost:8000')
+
+print(f'Factorial of {n} is {proxy.factorial(n)}')
